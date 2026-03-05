@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey, you. 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@300;400;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="heart-trail"></div>
+
+<!-- Floating BG hearts -->
+<div id="bgHearts"></div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-doodle" id="doodleLayer"></div>
+  <div class="hero-tag reveal">📬 You've got a letter</div>
+  <h1 class="hero-title">
+    Hey, <span class="pink squiggle">You</span>. <span class="wave">👋</span>
+  </h1>
+  <p class="hero-sub">There's something I've been working up the courage to say...</p>
+  <div class="hero-arrow">↓</div>
+</section>
+
+<!-- ══════════ THE THING ══════════ -->
+<section id="the-thing">
+  <div class="thing-inner">
+    <p class="section-tag reveal">okay so...</p>
+    <h2 class="handwritten reveal">"I had a whole plan.<br>A script. I practiced."</h2>
+    <p class="prose reveal">I was going to be <span class="highlight">very cool and casual</span> about this. Drop a hint here, a clever comment there. Make it seem effortless. Like I hadn't thought about it at all.</p>
+    <div class="sticky-note reveal delay2">Plot twist: I had thought about it. A lot. Like, an embarrassing amount.</div>
+    <p class="prose reveal delay3">And here we are. Because turns out, some people are just worth being a little bit <span class="highlight">un-cool</span> for.</p>
+  </div>
+</section>
+
+<!-- ══════════ POLAROIDS ══════════ -->
+<section id="polaroids">
+  <div class="polaroids-header">
+    <p class="section-tag reveal">chapter two ✦</p>
+    <h2 class="section-heading reveal">A few little things<br>that make me think of <em>you.</em></h2>
+  </div>
+  <div class="polaroid-scene">
+    <div class="polaroid p1 reveal-left">
+      <div class="tape"></div>
+      <img src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=400&q=80" alt="sunny day" style="width:230px;height:220px;">
+      <div class="polaroid-caption">sunny days feel sunnier 🌸</div>
+    </div>
+    <div class="polaroid p2 reveal">
+      <div class="tape tr"></div>
+      <img src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=400&q=80" alt="coffee" style="width:190px;height:170px;">
+      <div class="polaroid-caption">every coffee reminds me 🫶</div>
+    </div>
+    <div class="polaroid p3 reveal-right">
+      <div class="tape"></div>
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80" alt="flowers" style="width:270px;height:230px;">
+      <div class="polaroid-caption">pick you flowers? absolutely yes</div>
+    </div>
+    <div class="polaroid p4 reveal-left delay2">
+      <div class="tape tl"></div>
+      <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80" alt="stars" style="width:170px;height:150px;">
+      <div class="polaroid-caption">stargazing with you? 🌟</div>
+    </div>
+    <div class="polaroid p5 reveal delay2">
+      <div class="tape"></div>
+      <img src="https://images.unsplash.com/photo-1520520731457-9283dd14aa66?w=400&q=80" alt="adventure" style="width:250px;height:210px;">
+      <div class="polaroid-caption">endless adventures ahead</div>
+    </div>
+    <div class="polaroid p6 reveal-right delay2">
+      <div class="tape tr"></div>
+      <img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=400&q=80" alt="picnic" style="width:210px;height:190px;">
+      <div class="polaroid-caption">picnic dates, specifically 🧺</div>
+    </div>
+    <div class="polaroid p7 reveal-left delay4">
+      <div class="tape tl"></div>
+      <img src="https://images.unsplash.com/photo-1464979681340-bdd28a61699e?w=400&q=80" alt="golden hour" style="width:170px;height:150px;">
+      <div class="polaroid-caption">golden hour is for you</div>
+    </div>
+    <div class="polaroid p8 reveal-right delay4">
+      <div class="tape"></div>
+      <img src="https://images.unsplash.com/photo-1550159930-40066082a4fc?w=400&q=80" alt="laughter" style="width:190px;height:170px;">
+      <div class="polaroid-caption">because you make everything fun</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CHAT MONOLOGUE ══════════ -->
+<section id="monologue">
+  <div class="mono-header">
+    <p class="section-tag reveal">chapter three 💭</p>
+    <h2 class="section-heading reveal">My internal monologue<br>every time I see <em>you.</em></h2>
+    <p class="prose reveal" style="margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto;">Yes, it really goes like this. I'm a very normal and composed person.</p>
+  </div>
+  <div class="mono-phone reveal-pop">
+    <div class="phone-notch"></div>
+    <div class="chat-header">
+      <div class="chat-avatar">🧠</div>
+      <div class="chat-name">My Brain</div>
+      <div class="chat-status">● Definitely panicking</div>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FLOATING LOVE CARDS ══════════ -->
+<section id="love-cards">
+  <p class="section-tag reveal">chapter four 💌</p>
+  <h2 class="section-heading reveal">Things I <em>love</em> about you.<br><small style="font-size:0.5em;color:#b08898;font-family:'Caveat';font-weight:400;">(grab them, they float!)</small></h2>
+  <div class="cards-arena" id="cardsArena">
+    <!-- Cards added by JS -->
+  </div>
+</section>
+
+<!-- ══════════ CONFESSION ══════════ -->
+<section id="confession">
+  <div class="confession-inner">
+    <p class="section-tag reveal">the evidence 🔍</p>
+    <h2 class="big-caveat reveal">"Your honour, I present<br><span class="rose">Exhibit A through Z</span><br>of how obvious I am."</h2>
+    <div class="evidence-row reveal delay2">
+      <div class="evidence-chip">😳 Smiled at my phone</div>
+      <div class="evidence-chip">☕ Thought of you mid-coffee</div>
+      <div class="evidence-chip">💭 Daydreamed. A lot.</div>
+      <div class="evidence-chip">🤣 Laughed at everything you said</div>
+      <div class="evidence-chip">👀 Noticed everything</div>
+    </div>
+    <p class="prose reveal delay3">The verdict? <strong>Completely, helplessly smitten.</strong> The jury of my friends figured it out before I did. Apparently I'm not subtle.</p>
+    <div class="sticky-note reveal delay4" style="transform:rotate(1deg);background:var(--blush);color:#8a3a5a;">
+      They literally said: "just tell them already." So here I am. Telling you. 😅
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ THE REASON ══════════ -->
+<section id="the-reason">
+  <div class="reason-grid">
+    <div class="reason-imgs reveal-left">
+      <div class="r-img ri1">
+        <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=600&q=80" alt="together">
+      </div>
+      <div class="r-img ri2">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80" alt="joy">
+      </div>
+      <div class="r-img ri3">
+        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=600&q=80" alt="flowers">
+      </div>
+    </div>
+    <div class="reason-text reveal-right">
+      <div class="reason-num">♡</div>
+      <p class="section-tag">chapter five</p>
+      <h2 class="reason-heading">The real reason<br>I had to <em>say something.</em></h2>
+      <div style="width:50px;height:3px;background:var(--rose);border-radius:99px;margin:1rem 0 1.5rem;"></div>
+      <p class="prose">Because time is short and you deserve to know that someone out here thinks you are genuinely, quietly, wonderfully remarkable.</p>
+      <br>
+      <p class="prose">Not in a rehearsed way. Not in a grand gesture way. Just — in the everyday, ordinary, <span class="highlight">real kind of way</span> that actually matters.</p>
+      <div class="sticky-note" style="margin-left:0;transform:rotate(-1.5deg);">You make things better just by being in them. 🌷</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ THE ASK ══════════ -->
+<section id="the-ask">
+  <div class="ask-deco d1">🌸</div>
+  <div class="ask-deco d2">✨</div>
+  <div class="ask-deco d3">💐</div>
+  <div class="ask-deco d4">🌷</div>
+  <div class="ask-inner">
+    <span class="ask-eyebrow reveal">okay. deep breath. here goes.</span>
+    <h2 class="ask-heading reveal">
+      Will you<br>go out<br>with <em>me?</em>
+    </h2>
+    <p class="ask-body reveal">No pressure, no big expectations — just you and me, somewhere lovely, finding out if this could be the start of something really, really nice. I have a feeling it could be.</p>
+    <div class="btn-row reveal delay2">
+      <button class="btn-yes1" id="btnYes1">
+        Yes! 🌸
+        <span class="btn-fine-print">*obviously yes</span>
+      </button>
+      <button class="btn-yes2" id="btnYes2">
+        ...also Yes 🥺
+        <span class="btn-fine-print">*see, you get it</span>
+      </button>
+    </div>
+    <p class="prose reveal delay4" style="margin-top:2rem;font-size:0.75rem;color:#c0a0b0;">(I tried to put a "No" button. I couldn't do it. Both buttons are yes. You're welcome.)</p>
+  </div>
+</section>
+
+<!-- ══════════ YES SCREEN ══════════ -->
+<div id="yes-screen">
+  <div class="confetti-container" id="confettiContainer"></div>
+  <div class="yes-icon" id="yesIcon">🌹</div>
+  <h2 class="yes-title" id="yesTitle">I knew it. 🥰</h2>
+  <p class="yes-sub" id="yesSub">This is the best day.</p>
+  <p class="yes-detail" id="yesDetail">Now I have to figure out somewhere worthy of you. Give me a moment. I've been thinking about it for a while already.</p>
+</div>
+<div class="yes2-message" id="yes2Msg">Bold choice. I respect it. Also: yay!! 🎉</div>
+
+<script>
+// ── Cursor
+const cur = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cur.style.left = e.clientX+'px';
+  cur.style.top = e.clientY+'px';
+});
+document.addEventListener('mousedown',()=>cur.classList.add('clicking'));
+document.addEventListener('mouseup',()=>cur.classList.remove('clicking'));
+
+// ── Heart trail
+const trail = document.getElementById('heart-trail');
+const hearts = ['💗','💖','✨','🌸','💝','🌷'];
+document.addEventListener('mousemove', e => {
+  if(Math.random()>0.7){
+    const h = document.createElement('div');
+    h.style.cssText=`position:absolute;left:${e.clientX}px;top:${e.clientY}px;font-size:${10+Math.random()*10}px;pointer-events:none;animation:trailFade 1s ease forwards;transform:translate(-50%,-50%)`;
+    h.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+    trail.appendChild(h);
+    setTimeout(()=>h.remove(),1000);
+  }
+});
+const trailStyle = document.createElement('style');
+trailStyle.textContent='@keyframes trailFade{0%{opacity:0.8;transform:translate(-50%,-50%) scale(1);}100%{opacity:0;transform:translate(-50%,-150%) scale(0.5);}}';
+document.head.appendChild(trailStyle);
+
+// ── BG floating hearts
+const bgH = document.getElementById('bgHearts');
+['🌸','💕','✨','🌷','💗'].forEach((e,i)=>{
+  const d = document.createElement('div');
+  d.className='float-heart';
+  d.textContent=e;
+  d.style.left=`${10+i*18}%`;
+  d.style.animationDuration=`${8+i*3}s`;
+  d.style.animationDelay=`${i*2}s`;
+  d.style.fontSize=`${1+Math.random()}rem`;
+  bgH.appendChild(d);
+});
+
+// ── Doodle stars in hero
+const dl = document.getElementById('doodleLayer');
+for(let i=0;i<15;i++){
+  const s = document.createElement('div');
+  s.className='doodle-star';
+  s.textContent=['✦','✧','⋆','·','★'][Math.floor(Math.random()*5)];
+  s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:${0.8+Math.random()*1.5}rem;color:${['#E8638C','#B5EAD7','#FFB7C5','#FFDAC1'][Math.floor(Math.random()*4)]};animation-duration:${2+Math.random()*4}s;animation-delay:${Math.random()*3}s;`;
+  dl.appendChild(s);
+}
+
+// ── Scroll reveal
+const revEls = document.querySelectorAll('.reveal,.reveal-pop,.reveal-left,.reveal-right');
+const revObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});
+},{threshold:0.12});
+revEls.forEach(el=>revObs.observe(el));
+
+// ── Chat bubbles
+const chatMessages = [
+  {type:'thought',text:'Oh no. There they are.'},
+  {type:'sent',text:'Hey! 😊'},
+  {type:'received',text:'Hey! What\'s up?'},
+  {type:'thought',text:'WHAT IS UP??? Everything. Nothing. You. This. Help.'},
+  {type:'sent',text:'Not much, just hanging out 😎'},
+  {type:'thought',text:'That was so cool. I am so cool right now.'},
+  {type:'received',text:'Haha same! Your laugh is the best btw 😄'},
+  {type:'thought',text:'THEY SAID SOMETHING NICE. STAY CALM. DO NOT SPIRAL.'},
+  {type:'sent',text:'Yours is better honestly 💀'},
+  {type:'thought',text:'💀 THE SKULL EMOJI? Okay we\'re good. We survived.'},
+];
+const chatContainer = document.getElementById('chatMessages');
+let bubbleIndex = 0;
+function showNextBubble(){
+  if(bubbleIndex >= chatMessages.length) return;
+  const msg = chatMessages[bubbleIndex];
+  // typing indicator
+  if(msg.type==='received'){
+    const dots = document.createElement('div');
+    dots.className='typing-dots';
+    dots.innerHTML='<span></span><span></span><span></span>';
+    chatContainer.appendChild(dots);
+    chatContainer.scrollTop=chatContainer.scrollHeight;
+    setTimeout(()=>{
+      dots.remove();
+      addBubble(msg);
+      bubbleIndex++;
+      setTimeout(showNextBubble,900+Math.random()*700);
+    },1200);
+  } else {
+    addBubble(msg);
+    bubbleIndex++;
+    setTimeout(showNextBubble,900+Math.random()*700);
+  }
+}
+function addBubble(msg){
+  const b = document.createElement('div');
+  b.className=`bubble ${msg.type}`;
+  b.textContent=msg.text;
+  chatContainer.appendChild(b);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>b.classList.add('shown')));
+  chatContainer.scrollTop=chatContainer.scrollHeight;
+}
+// Start chat when section is visible
+const chatObs = new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting && bubbleIndex===0){
+    setTimeout(showNextBubble,600);
+  }
+},{threshold:0.3});
+chatObs.observe(document.getElementById('monologue'));
+
+// ── Floating Love Cards
+const cardData = [
+  {emoji:'🧠',title:'The way you think',desc:'You see the world sideways. It\'s endlessly interesting.',color:'card-color-1'},
+  {emoji:'😂',title:'That laugh',desc:'The real one. Catching you off guard. I live for it.',color:'card-color-3'},
+  {emoji:'💬',title:'Conversations with you',desc:'Time disappears. I always walk away smiling.',color:'card-color-2'},
+  {emoji:'🌟',title:'How you light up',desc:'You walk in and the room actually gets better.',color:'card-color-4'},
+  {emoji:'🫶',title:'Your kindness',desc:'Quietly, consistently good. No fuss. Just kind.',color:'card-color-5'},
+  {emoji:'🎯',title:'Your honesty',desc:'You say what you mean. That\'s rare. I love it.',color:'card-color-6'},
+  {emoji:'✨',title:'The little things',desc:'Your details. The tiny habits. All of it.',color:'card-color-1'},
+  {emoji:'🌸',title:'All the rest',desc:'There are too many. I\'d like more time to find them all.',color:'card-color-3'},
+];
+
+const arena = document.getElementById('cardsArena');
+const cardEls = [];
+let dragCard=null,dragOffX=0,dragOffY=0;
+
+function lerp(a,b,t){return a+(b-a)*t;}
+
+cardData.forEach((data,i)=>{
+  const card = document.createElement('div');
+  card.className=`love-card ${data.color}`;
+  card.innerHTML=`<span class="card-emoji">${data.emoji}</span><div class="card-title">${data.title}</div><div class="card-desc">${data.desc}</div>`;
+  
+  const cols=4,rows=2;
+  const col=i%cols, row=Math.floor(i/cols);
+  const W=arena.offsetWidth||900;
+  const H=arena.offsetHeight||580;
+  const bx=(col/cols)*W + (W/cols-200)/2 + Math.random()*30-15;
+  const by=(row/rows)*H + (H/rows-160)/2 + Math.random()*20-10;
+  
+  let px=bx,py=by;
+  let vx=(Math.random()-0.5)*0.4,vy=(Math.random()-0.5)*0.4;
+  let targetX=bx,targetY=by;
+  let isDragging=false;
+  
+  card.style.left=px+'px';
+  card.style.top=py+'px';
+  const rotation=(Math.random()-0.5)*10;
+  card.style.transform=`rotate(${rotation}deg)`;
+  
+  card.addEventListener('mousedown',e=>{
+    isDragging=true;
+    dragCard=card;
+    dragOffX=e.clientX-card.getBoundingClientRect().left;
+    dragOffY=e.clientY-card.getBoundingClientRect().top;
+    card.style.zIndex=100;
+    card.style.transition='box-shadow 0.2s, border-color 0.2s';
+    vx=0;vy=0;
+    e.preventDefault();
+  });
+  
+  cardEls.push({card,px,py,vx,vy,targetX,targetY,bx,by,rotation,isDragging:()=>isDragging,setDrag:(v)=>{isDragging=v;},setPos:(x,y)=>{px=x;py=y;},getPos:()=>({px,py}),getV:()=>({vx,vy}),setV:(x,y)=>{vx=x;vy=y;}});
+});
+
+// Add all cards
+cardEls.forEach(c=>arena.appendChild(c.card));
+
+// Mouse drag handlers
+document.addEventListener('mousemove',e=>{
+  if(!dragCard)return;
+  const arenaRect=arena.getBoundingClientRect();
+  const nx=e.clientX-arenaRect.left-dragOffX;
+  const ny=e.clientY-arenaRect.top-dragOffY;
+  dragCard.style.left=nx+'px';
+  dragCard.style.top=ny+'px';
+  const obj=cardEls.find(c=>c.card===dragCard);
+  if(obj){obj.setPos(nx,ny);obj.setV(0,0);}
+});
+document.addEventListener('mouseup',()=>{
+  if(dragCard){
+    dragCard.style.zIndex='';
+    dragCard.style.transition='';
+    const obj=cardEls.find(c=>c.card===dragCard);
+    if(obj){obj.setDrag(false);obj.setV((Math.random()-0.5)*2,(Math.random()-0.5)*2);}
+    dragCard=null;
+  }
+});
+
+// Float animation
+function animateCards(){
+  const W=arena.offsetWidth;
+  const H=arena.offsetHeight;
+  cardEls.forEach(obj=>{
+    if(obj.isDragging())return;
+    let {px,py,vx,vy}=obj.getPos();
+    ({vx,vy}=obj.getV());
+    px+=vx;py+=vy;
+    // gentle float
+    const dx=obj.bx-px,dy=obj.by-py;
+    vx+=dx*0.0008;
+    vy+=dy*0.0008;
+    vx*=0.99;vy*=0.99;
+    // bounce walls
+    if(px<0){px=0;vx=Math.abs(vx);}
+    if(py<0){py=0;vy=Math.abs(vy);}
+    if(px>W-200){px=W-200;vx=-Math.abs(vx);}
+    if(py>H-160){py=H-160;vy=-Math.abs(vy);}
+    obj.setPos(px,py);
+    obj.setV(vx,vy);
+    obj.card.style.left=px+'px';
+    obj.card.style.top=py+'px';
+  });
+  requestAnimationFrame(animateCards);
+}
+// Start after brief delay
+setTimeout(animateCards,500);
+
+// ── Yes buttons
+function triggerYes(variant){
+  const screen=document.getElementById('yes-screen');
+  if(variant===2){
+    document.getElementById('yesIcon').textContent='😭';
+    document.getElementById('yesTitle').textContent='You picked "also yes." 💀';
+    document.getElementById('yesSub').textContent='Honestly? Iconic. I\'m into it.';
+    document.getElementById('yesDetail').textContent='The answer was always yes. You just gave it with style.';
+    const msg=document.getElementById('yes2Msg');
+    msg.classList.add('show');
+    setTimeout(()=>msg.classList.remove('show'),3000);
+  }
+  screen.classList.add('active');
+  spawnConfetti();
+}
+
+document.getElementById('btnYes1').addEventListener('click',()=>triggerYes(1));
+document.getElementById('btnYes2').addEventListener('click',()=>triggerYes(2));
+document.getElementById('yes-screen').addEventListener('click',()=>{
+  document.getElementById('yes-screen').classList.remove('active');
+});
+
+function spawnConfetti(){
+  const container=document.getElementById('confettiContainer');
+  container.innerHTML='';
+  const colors=['#F4A7B9','#B5EAD7','#FFF3B0','#D4BBFF','#FFCBA4','#C1E1FF','#FF8FA3'];
+  for(let i=0;i<80;i++){
+    const p=document.createElement('div');
+    p.className='confetti-piece';
+    p.style.left=`${Math.random()*100}vw`;
+    p.style.background=colors[Math.floor(Math.random()*colors.length)];
+    p.style.width=`${6+Math.random()*10}px`;
+    p.style.height=`${8+Math.random()*14}px`;
+    p.style.borderRadius=Math.random()>0.5?'50%':'2px';
+    p.style.animationDuration=`${2+Math.random()*4}s`;
+    p.style.animationDelay=`${Math.random()*2}s`;
+    container.appendChild(p);
+  }
+}
+</script>
+</body>
+</html>
